@@ -66,6 +66,38 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!  
 
+### Environment Setup
+*** 
+Adapted from https://github.com/udacity/deep-reinforcement-learning#dependencies 
+***
+#### Dependencies
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+    * Linux or Mac:
+        ```
+        conda create --name drlnd python=3.6
+        source activate drlnd
+        ```
+    * Windows:
+        ```
+        conda create --name drlnd python=3.6 
+        activate drlnd
+        ```
+2. navigate to the `python/` folder. Then, install several dependencies.
+    ```
+    git clone https://github.com/udacity/deep-reinforcement-learning.git
+    cd deep-reinforcement-learning/python
+    pip install .
+    ```
+
+3. Create an IPython kernel for the drlnd environment.
+    ```
+    python -m ipykernel install --user --name drlnd --display-name "drlnd"
+    ```
+    Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu.
+
+
 ### (Optional) Challenge: Crawler Environment
 
 After you have successfully completed the project, you might like to solve the more difficult **Crawler** environment.

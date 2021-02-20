@@ -8,7 +8,12 @@
 ## Algorithm and Methods
 My initial attempt was to implement A2C in order to parallelize the learning process on the GPU.  I could not get the solo agent to learn -- my suspision is that my implementation was wrong.
 
-I then moved on to repurposing the DDPG agent described in the code. Pulling everyhting over and adapting to the Reacher environment was simple enough.  The agent learned well enough in the solo environment that I decided to fiddle with the underlying network structure.  
+I then moved on to repurposing the DDPG agent described in the code. Pulling everyhting over and adapting to the Reacher environment was simple enough.  The agent learned well enough in the solo environment that I decided to fiddle with the underlying network structure.
+
+***
+### The DDPG Algorithm
+The DDPG algorithm is an actor-critic method that uses target networks to reduce variance and stabilize training.  The actor approximates the optimal policy. The critic approximates the action-value function (expected future rewards for an action).  In training, the corresponding regular networks are updated at regular intervals based on their loss.  Using the `soft update` method, the target networks are gradually updated over these timesteps, in order to further reduce variance and converge faster.
+***
 
 I was curious to see if I could make the networks smaller with the hope that this would speed up the training step.  I changed the Actor's hidden layer to 64 parameters (down from 256).  I also changed the Critic by removing the fourth layer and reducing the two remaining hidden layers to 128 (from 256) and 64 (also from 256).  This did not seem to greatly affect performance and slightly increased training time to "solve" the environment.
 
