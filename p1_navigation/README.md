@@ -5,6 +5,8 @@
 # Udacity Deep Reinforcement Nanodegree
 # Project 1: Navigation
 
+Original repository:  https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation
+
 ### Introduction
 
 For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
