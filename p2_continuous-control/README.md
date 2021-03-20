@@ -6,6 +6,8 @@
 
 # Project 2: Continuous Control
 
+Original repository: https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control
+
 ### Introduction
 
 For this project, you will work with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
